@@ -12,7 +12,7 @@ public class UserRegistration {
         System.out.println("Enter Last Name: ");
         userRegistration.lastName(input.next());
         System.out.println("Enter Email id: ");
-        userRegistration.email(input.next());
+        //userRegistration.email(input.next());
 	System.out.println("enter PHONE NUMBER");
 	userRegistration.phoneNumber(input.next());
 	System.out.println("enter PASSWORD");
@@ -38,7 +38,7 @@ public class UserRegistration {
 		}
 	   }
 
-	 public static void email(String email) {
+	 /*public static void email(String email) {
 		System.out.println("Enter Email: ");
                 if (Pattern.matches("^[A-Za-Z]+([.\\+_-#@][a-zA-z])*@[0-9a-zA-Z]+.[a-z]{2,4}([.][a-zA-Z]{2, }*$", email)) {
                 System.out.println("Valid Email");
@@ -46,7 +46,7 @@ public class UserRegistration {
                 else {
                 System.out.println("Invalid Email");
 		}
-	   }
+	   }*/
 
 	 public static void phoneNumber(String phoneNumber) {
                 System.out.println("Enter phoneNumber: ");
@@ -60,7 +60,7 @@ public class UserRegistration {
 
 	  public static void password(String password) {
                 System.out.println("Enter PASSWORD: ");
-                if (Pattern.matches("[A-Z]{1}[a-zA-Z]{8,}", password)) {
+                if (Pattern.matches("^(?=.*[A-Z])(?=,*[0-9]) [a-zA-Z0-9]{8,}$", password)) {
                 System.out.println("Valid PASSWORD");
                 }
                 else {
