@@ -13,7 +13,8 @@ public class UserRegistration {
         userRegistration.lastName(input.next());
         System.out.println("Enter Email id: ");
         userRegistration.email(input.next());
-//        scanner.close();
+	System.out.println("enter PHONE NUMBER");
+	userRegistration.phoneNumber(input.next());
 	}
 
 	public static void firstName( String firstName ) {
@@ -42,9 +43,16 @@ public class UserRegistration {
                 else {
                 System.out.println("Invalid Email");
                 }
-           }
-    }
 
-
+	 public static void phoneNumber(String phoneNumber) {
+                System.out.println("Enter phoneNumber: ");
+                if (Pattern.matches("^91[6-9]{1}[0-9]{9}$", phoneNumber)) {
+                System.out.println("Valid NUMBER");
+                }
+                else {
+                System.out.println("Invalid NUMBER");
+		}
+	    }
+     }
 
 
