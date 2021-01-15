@@ -15,6 +15,9 @@ public class UserRegistration {
         userRegistration.email(input.next());
 	System.out.println("enter PHONE NUMBER");
 	userRegistration.phoneNumber(input.next());
+	System.out.println("enter PASSWORD");
+        userRegistration.password(input.next());
+
 	}
 
 	public static void firstName( String firstName ) {
@@ -34,15 +37,16 @@ public class UserRegistration {
             	System.out.println("Invalid Last Name");
 		}
 	   }
-	
-	 public static void email(String email) { 
-		System.out.println("Enter Email: "); 
+
+	 public static void email(String email) {
+		System.out.println("Enter Email: ");
                 if (Pattern.matches("^[A-Za-Z]+([.\\+_-#@][a-zA-z])*@[0-9a-zA-Z]+.[a-z]{2,4}([.][a-zA-Z]{2, }*$", email)) {
                 System.out.println("Valid Email");
                 }
                 else {
                 System.out.println("Invalid Email");
-                }
+		}
+	   }
 
 	 public static void phoneNumber(String phoneNumber) {
                 System.out.println("Enter phoneNumber: ");
@@ -53,6 +57,17 @@ public class UserRegistration {
                 System.out.println("Invalid NUMBER");
 		}
 	    }
+
+	  public static void password(String password) {
+                System.out.println("Enter pASSWORD: ");
+                if (Pattern.matches("[0-9a-zA-Z]{8, }", password)) {
+                System.out.println("Valid PASSWORD");
+                }
+                else {
+                System.out.println("Invalid PASSWORD");
+                }
+            }
+
      }
 
 
