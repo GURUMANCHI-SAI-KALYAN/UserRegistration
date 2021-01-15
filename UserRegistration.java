@@ -59,8 +59,8 @@ public class UserRegistration {
 	    }
 
 	  public static void password(String password) {
-                System.out.println("Enter pASSWORD: ");
-                if (Pattern.matches("[0-9a-zA-Z]{8, }", password)) {
+                System.out.println("Enter PASSWORD: ");
+                if (Pattern.matches("[A-Z]{1}[a-zA-Z]{8,}", password)) {
                 System.out.println("Valid PASSWORD");
                 }
                 else {
